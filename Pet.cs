@@ -7,13 +7,13 @@ public class Pet
 
     public void Start()
     {
-        Console.Write("Ange namn på ditt husdjur: ");
+        Console.Write("Enter name of your pet: ");
         name = Console.ReadLine();
-        Console.Write("Ange ålder: ");
+        Console.Write("Enter " + name + "'s age: ");
         age = int.Parse(Console.ReadLine());
-        Console.Write("Är det hona? (ja/nej): ");
-        isFemale = Console.ReadLine().ToLower() == "ja";
+        Console.Write("Is "+ name + "a female (y/n)? ");
+        isFemale = Console.ReadLine().ToLower() == "y";
         
-        Console.WriteLine($"Husdjur: {name}, Ålder: {age}, Kön: {(isFemale ? "Hona" : "Hane")}");
+        Console.WriteLine($"----------------------------\nName: {name}, Age: {age}\n{name} is a good {(isFemale ? "girl" : "boy")}!\n----------------------------");
     }
 }
